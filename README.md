@@ -1,0 +1,2 @@
+# zh-char2jp-char
+为了便于翻译而编写的用于将Unicode简体汉字转化为ShiftJIS日文汉字的工具。原理为使用dict对常见字进行简单的映射
