@@ -1,3 +1,5 @@
+from pyperclip import copy
+
 zh_jp = {
     '诅': '詛',
     '伫': '佇',
@@ -17,7 +19,7 @@ zh_jp = {
     '啦': '喇',
     '哟': '黝',
     '呢': '訥',
-    '吧': '巴',
+    '吧': '罷',
     '跑': '鉋',
     '舔': '舐',
     '墙': '牆',
@@ -1852,10 +1854,12 @@ zh_jp = {
 
 if __name__ == "__main__":
     while True:
+        res = ""
         zh = input("请输入简体内容：")
         for char in zh:
             if zh_jp.get(char):
-                print(zh_jp[char], end="")
+                res += zh_jp[char]
             else:
-                print(char, end="")
-        print()
+                res += char
+        copy(res)
+        print(res)
